@@ -51,6 +51,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
 p {
     font-size: 1.6rem;
     font-weight: 400;
@@ -67,4 +72,221 @@ a {
 div {
     background-color: var(--main);
     border-radius: 1rem;
+}
+
+.slogan-primary {
+    font-size: 2.5rem;
+    color: var(--main);
+    font-weight: 600;
+}
+
+.call-to-action {
+    font-size: 2rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.section-1 {
+    background-color: var(--main);
+}
+
+.container-primary {
+    background-color: var(--bg-secondary);
+}
+
+.download-header {
+    font-size: 1rem;
+    color: var(--bg-secondary);
+    background-color: var(--main);
+}
+
+.section-2 {
+    background-color: var(--bg-secondary);
+
+}
+
+.heading-about {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.heading-description {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-2>div {
+    background-color: var(--bg-secondary);
+}
+
+.section-2>p {
+    font-weight: 400;
+}
+
+.section-3 {
+    background-color: var(--main);
+}
+
+.section-3>h2 {
+    color: var(--bg-secondary);
+}
+
+.section-3>p {
+    color: var(--bg-secondary);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.section-3>h3 {
+    font-size: 2rem;
+    color: var(--bg-secondary);
+    font-weight: 600;
+}
+
+.section-4 {
+    background-color: var(--bg-secondary);
+}
+
+.section-4>h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.section-4>p {
+    font-weight: 400;
+}
+
+.section-4>div {
+    background-color: var(--main);
+    color: var(--bg-secondary)
+}
+
+.section-4>div>p {
+    color: var(--bg-secondary)
+}
+
+p.amount {
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.section-5 {
+    background-color: var(--main);
+}
+
+.section-5>p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.section-5>p {
+    color: var(--bg-secondary);
+}
+
+.section-5>h2 {
+    color: var(--bg-secondary);
+}
+
+.section-6 {
+    background-color: var(--main);
+}
+
+
+
+.section-6>p {
+    color: var(--bg-secondary);
+}
+
+.section-6>h2 {
+    color: var(--bg-secondary);
+}
+
+.section-6>ul {
+    background-color: var(--bg-secondary);
+    color: var(--text-main)
+}
+
+.section-6>ul>li>p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.section-6>ul>li>p:last-of-type {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.section-7 {
+    background-color: var(--bg-secondary);
+
+}
+
+.section-7>h2 {
+    color: var(--text-main)
+}
+
+/* .section-7>p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+} */
+
+.section-7>div {
+    background-color: var(--bg-secondary);
+}
+
+.section-7>div>h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.section-7>div>a {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main);
+    text-decoration: underline;
+}
+
+.section-7>div:last-of-type>h3 {
+    font-size: 2rem;
+    color: var(--text-main);
+}
+
+footer {
+    background-color: var(--text-main);
+    color: var(--bg-secondary);
+}
+
+footer>p {
+    color: var(--bg-secondary);
+}
+
+footer>div {
+    background-color: transparent;
+}
+
+footer>h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+footer>a {
+    color: var(--bg-secondary);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+footer>form>input {
+    background-color: var(--bg-secondary);
+
+}
+
+.copyright {
+    font-weight: 300;
+    font-size: 1.28rem;
 }
