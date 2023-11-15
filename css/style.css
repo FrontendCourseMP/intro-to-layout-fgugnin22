@@ -70,10 +70,6 @@ nav {
     z-index: 2;
 }
 
-
-
-
-
 section {
     width: 375px;
 }
@@ -109,12 +105,6 @@ img {
     background-color: rgb(181, 18, 165)
 }
 
-.slogan-primary {
-    font-size: 2.5rem;
-    color: var(--main);
-    font-weight: 600;
-}
-
 nav::after {
     width: 100px;
     height: 60px;
@@ -134,10 +124,11 @@ nav>button:first-of-type {
     background-color: rgb(181, 18, 165);
 }
 
-/* nav>a {
-    z-index: 4;
-    margin-left: 95px;
-} */
+.slogan-primary {
+    font-size: 2.5rem;
+    color: var(--main);
+    font-weight: 600;
+}
 
 .call-to-action {
     font-size: 2rem;
@@ -180,7 +171,7 @@ nav>button:first-of-type {
     left: 20px;
     border: 10px solid #7572FF;
     content: "";
-    /* не работает зиндекс?! */
+    /* не работает зиндекс wtf?! */
 }
 
 .download-header {
