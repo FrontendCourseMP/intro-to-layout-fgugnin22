@@ -109,7 +109,7 @@ h1 {
 }
 
 img {
-    background-color: rgb(181, 18, 165)
+    /* background-color: rgb(181, 18, 165) */
 }
 
 nav>a {
@@ -117,7 +117,7 @@ nav>a {
     display: block;
     width: 100px;
     height: 40px;
-    margin-left: 40px;
+    margin-left: 30px;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -141,10 +141,9 @@ nav::after {
 }
 
 nav>button:first-of-type {
-    padding: 12px;
-    margin: 8px;
+    margin: 7px;
     border: none;
-    background-color: rgb(181, 18, 165);
+    background-color: var(--bg-secondary);
 }
 
 .slogan-primary {
@@ -222,7 +221,7 @@ nav>button:first-of-type {
     margin: 10px 0
 }
 
-.container-primary>a {
+.container-primary>a>img {
     width: 108px;
     height: 34px;
     display: inline-block;
@@ -230,7 +229,8 @@ nav>button:first-of-type {
     position: relative;
     z-index: 3;
     text-align: left;
-    margin: 10px 10px 10px 0
+    margin-right: 10px;
+    border-radius: 4px;
 }
 
 .download-header {
@@ -270,7 +270,7 @@ nav>button:first-of-type {
     text-align: left;
 }
 
-.section-about-primary>div>img {
+.section-about-primary>div>svg {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -313,16 +313,14 @@ nav>button:first-of-type {
     margin: 0 56px 18px 56px;
 }
 
-.section-about-secondary>img:not(:nth-of-type(4)) {
+.section-about-secondary>svg {
     margin: 40px 122px 30px 122px;
 }
 
-.section-about-secondary>img:nth-of-type(4) {
-    width: 214px;
-    height: 468px;
+.section-about-secondary>img {
+    width: 375px;
     display: block;
-    margin: 60px 41px 80px 41px;
-
+    margin-left: -39px;
 }
 
 .section-about-secondary>p {
@@ -383,12 +381,21 @@ nav>button:first-of-type {
     max-height: 16px;
 }
 
-.section-download-call-secondary>a {
-    width: 150px;
-    height: 47px;
-    background-color: #000;
+.section-download-call-secondary>a>img {
+    width: 108px;
+    height: 34px;
     display: inline-block;
-    margin-bottom: 60px;
+    background-color: #000;
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    margin-right: 10px;
+    border-radius: 4px;
+
+}
+
+.section-download-call-secondary>a>img:first-of-type {
+    margin: 20px 10px 60px 0;
 }
 
 .section-download-call-secondary>a:first-of-type {
@@ -424,9 +431,7 @@ p.amount {
 }
 
 .section-how-to-use>img {
-    width: 343px;
-    height: 150px;
-    display: block;
+    border-radius: 10px;
     position: relative;
     top: 75px;
     z-index: 1;
@@ -485,7 +490,6 @@ p.amount {
     width: 50px;
     height: 50px;
     display: inline-block;
-    margin-bottom: 12px;
 }
 
 .section-happy-customers>.slider {
@@ -508,9 +512,23 @@ p.amount {
 }
 
 .section-happy-customers>div.slider {
-    width: 150px;
+    width: 160px;
     margin: 40px 94px 0 94px;
 }
+
+.section-happy-customers>div.slider>button:first-of-type::before {
+    content: "";
+    border: 1px solid white;
+    display: inline;
+    padding: 11px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    /* z-index: 0; */
+}
+
 
 .section-happy-customers>div.slider>button {
     display: inline;
@@ -519,6 +537,7 @@ p.amount {
     border-radius: 50%;
     margin-right: 10px;
     background-color: #FFF;
+    position: relative;
 }
 
 .section-recent-blog {
@@ -547,7 +566,7 @@ p.amount {
 .section-recent-blog>div>img {
     width: 343px;
     height: 228px;
-    display: block;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .section-recent-blog>div>h3 {
@@ -621,11 +640,13 @@ footer>.footer-links {
     margin-bottom: 60px;
 }
 
-footer>.footer-links>a>img {
+footer>.footer-links>a>svg {
     display: block;
     width: 22px;
     height: 22px;
     margin-right: 32px;
+    position: relative;
+    bottom: 1px;
 }
 
 footer>.footer-links>.divider-vert {
@@ -679,10 +700,10 @@ footer>form {
 
 footer>form>button {
     position: absolute;
-    padding: 17px;
+    padding: 6px 5px 4px 6px;
     display: block;
     right: 3px;
-    top: 3.5px;
+    top: 2px;
     border: none;
     background-color: var(--main);
     border-radius: 4px;
