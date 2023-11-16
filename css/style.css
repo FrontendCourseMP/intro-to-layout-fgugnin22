@@ -165,7 +165,8 @@ nav>button:first-of-type {
 
 
 .section-download-call-primary {
-    background-color: var(--main);
+    /* background-color: var(--main); */
+    background-image: url(../img/background1.png);
     padding: 88px 16px 120px 16px;
 
 }
@@ -300,7 +301,8 @@ nav>button:first-of-type {
 
 
 .section-about-secondary {
-    background-color: var(--main);
+    /* background-color: var(--main); */
+    background-image: url(../img/background2.png);
     padding: 60px 39px;
 }
 
@@ -455,7 +457,9 @@ p.amount {
 }
 
 .section-happy-customers {
-    background-color: var(--main);
+    /* background-color: var(--main); */
+    background-image: url(../img/background3.png);
+    background-position: center;
     padding: 60px 16px;
     text-align: center;
 }
