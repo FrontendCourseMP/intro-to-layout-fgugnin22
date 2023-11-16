@@ -266,6 +266,10 @@ nav>button:first-of-type {
 
 }
 
+.section-about-primary>div>p {
+    text-align: left;
+}
+
 .section-about-primary>div>img {
     position: absolute;
     width: 24px;
@@ -291,6 +295,7 @@ nav>button:first-of-type {
 .heading-description {
     font-size: 2rem;
     font-weight: 600;
+    text-align: left;
 }
 
 
