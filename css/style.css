@@ -56,6 +56,11 @@
     max-width: 375px;
 }
 
+body {
+    min-width: 100vw;
+    padding: 0 calc(50vw - 187.5px);
+}
+
 header {
     width: 100%;
     background-color: var(--main);
@@ -68,6 +73,8 @@ nav {
     position: relative;
     height: 40px;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 section {
@@ -105,6 +112,21 @@ img {
     background-color: rgb(181, 18, 165)
 }
 
+nav>a {
+    width: min-content;
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin-left: 40px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 3;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
 nav::after {
     width: 100px;
     height: 60px;
@@ -115,6 +137,7 @@ nav::after {
     left: 122px;
     top: -10px;
     z-index: 0;
+    border-radius: 4px;
 }
 
 nav>button:first-of-type {
@@ -126,8 +149,13 @@ nav>button:first-of-type {
 
 .slogan-primary {
     font-size: 2.5rem;
-    color: var(--main);
     font-weight: 600;
+    line-height: 3.75rem;
+    color: var(--main);
+    position: relative;
+    z-index: 3;
+    margin-top: 0 !important;
+
 }
 
 .call-to-action {
@@ -153,25 +181,56 @@ nav>button:first-of-type {
 .container-primary {
     background-color: var(--bg-secondary);
     width: 323px;
-    padding: 30px 18px 21px 18px;
+    padding: 30px 18px 15px 18px;
     border-radius: 0;
     position: relative;
-    z-index: 9;
+    z-index: 3;
 
 }
 
 
 .container-primary::before {
     box-sizing: border-box;
-    position: absolute;
     width: 323px;
     height: 358px;
     display: block;
-    bottom: 20px;
+    top: -20px;
     left: 20px;
     border: 10px solid #7572FF;
     content: "";
-    /* не работает зиндекс wtf?! */
+    position: absolute;
+    z-index: 1;
+}
+
+.container-primary::after {
+    box-sizing: border-box;
+    width: 323px;
+    height: 358px;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: var(--bg-secondary);
+    position: absolute;
+    z-index: 2;
+}
+
+.container-primary>p {
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    margin: 10px 0
+}
+
+.container-primary>a {
+    width: 108px;
+    height: 34px;
+    display: inline-block;
+    background-color: #000;
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    margin: 10px 10px 10px 0
 }
 
 .download-header {
@@ -538,19 +597,6 @@ p.amount {
     margin: 0 79px 30px 79px;
 }
 
-/* 
-.section-recent-blog>div:last-of-type::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 375px;
-    background-color: var(--text-main);
-    height: 156px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-} */
-
 footer {
     background-color: var(--text-main);
     color: var(--bg-secondary);
@@ -643,4 +689,5 @@ footer>hr {
     font-weight: 300;
     font-size: 1.28rem;
     text-align: center;
+    margin-bottom: 0;
 }
