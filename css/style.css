@@ -259,16 +259,19 @@ nav>button:first-of-type {
 
 
 .section-about-primary>div {
+
     width: 343px;
     padding: 18px 16px 10px 60px;
     position: relative;
     margin-bottom: 20px;
     background-color: var(--bg-secondary);
-
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 }
 
 .section-about-primary>div>p {
     text-align: left;
+    margin: 6px 0;
 }
 
 .section-about-primary>div>svg {
@@ -297,6 +300,7 @@ nav>button:first-of-type {
     font-size: 2rem;
     font-weight: 600;
     text-align: left;
+    margin: 0;
 }
 
 
@@ -437,6 +441,7 @@ p.amount {
     position: relative;
     top: 75px;
     z-index: 1;
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.24);
 }
 
 .section-how-to-use>p:first-of-type {
@@ -483,6 +488,9 @@ p.amount {
     list-style-type: none;
     text-align: center;
     padding: 20px 9px;
+    border-radius: 10px;
+    /* Effect-2 */
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -496,9 +504,6 @@ p.amount {
     display: inline-block;
 }
 
-.section-happy-customers>.slider {
-    width: 154px;
-}
 
 .section-happy-customers>ul>li>p:first-of-type {
     font-size: 2.5rem;
@@ -516,6 +521,7 @@ p.amount {
 }
 
 .section-happy-customers>div.slider {
+    background-color: transparent;
     width: 160px;
     margin: 40px 94px 0 94px;
 }
@@ -565,6 +571,9 @@ p.amount {
     width: 343px;
     padding: 0 0 30px 0;
     margin-bottom: 40px;
+    border-radius: 10px;
+    /* Effect-1 */
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 }
 
 .section-recent-blog>div>img {
@@ -599,12 +608,14 @@ p.amount {
 
 .section-recent-blog>div:last-of-type {
     width: 343px;
-    margin-top: 20px;
+    margin-top: -120px;
     padding: 30px 34px 30px 34px;
     text-align: center;
     background-color: var(--bg-secondary);
     position: relative;
     top: 155px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.10);
 }
 
 .section-recent-blog>div:last-of-type>img {
@@ -637,6 +648,7 @@ footer {
 
 footer>h2 {
     margin-bottom: 5px;
+    margin-top: 0;
 }
 
 footer>.footer-links {
@@ -676,6 +688,7 @@ footer>h3 {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 
 
@@ -704,10 +717,10 @@ footer>form {
 
 footer>form>button {
     position: absolute;
-    padding: 6px 5px 4px 6px;
+    padding: 5.5px 5px 3.5px 6px;
     display: block;
     right: 3px;
-    top: 2px;
+    top: 3px;
     border: none;
     background-color: var(--main);
     border-radius: 4px;
