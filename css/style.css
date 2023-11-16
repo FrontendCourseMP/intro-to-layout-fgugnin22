@@ -646,7 +646,7 @@ p.amount {
 footer {
     background-color: var(--text-main);
     color: var(--bg-secondary);
-    padding: 220px 16px 30px 16px;
+    padding: 220px 16px 16px 16px;
 }
 
 footer>h2 {
@@ -656,7 +656,7 @@ footer>h2 {
 
 footer>.footer-links {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 footer>.footer-links>a>svg {
@@ -704,13 +704,14 @@ footer>a {
 }
 
 footer>a:last-of-type {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 footer>form>input {
     background-color: var(--bg-secondary);
     width: 343px;
     padding: 13px 0 13px 17px;
+    border-radius: 4px;
 }
 
 footer>form {
