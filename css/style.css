@@ -167,7 +167,8 @@ nav>button:first-of-type {
 }
 
 .section-download-call-primary>img {
-    width: 77%;
+    /* width: 77%; */
+    max-width: min(100%, 1440px);
     display: block;
     margin: 60px 39px 0 39px;
 }
