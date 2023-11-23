@@ -318,9 +318,13 @@ nav>button:first-of-type {
 }
 
 .section-about-secondary>img {
-    width: 100%;
+    width: min(calc(100vw - 160px), 375px);
+    max-width: 100%;
     display: block;
     object-fit: contain;
+    border-radius: 40px;
+    margin: 60px 80px 80px 80px;
+    box-shadow: 40px 40px 100px 0px rgba(24, 48, 63, 0.50);
 }
 
 .section-about-secondary>p {
@@ -426,8 +430,8 @@ nav>button:first-of-type {
 }
 
 .section-download-call-secondary>img {
-    width: 334px;
-    height: 311px;
+    width: min(calc(100vw - 40px), 516px);
+    max-width: 100%;
     display: block;
     margin: 0 3px;
 
