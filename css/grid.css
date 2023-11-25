@@ -1,0 +1,177 @@
+main {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.painting {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+.strip {
+    box-sizing: content-box;
+    border-radius: 0;
+    border: 2px solid black;
+}
+
+.s1 {
+    border-radius: 10px 0 0 0;
+    grid-column: span 2 / span 2;
+    background-color: red;
+}
+
+.s2 {
+    column-span: 1;
+    background-color: #fff;
+}
+
+.s3 {
+    column-span: 1;
+    background-color: #fff;
+}
+
+.s4 {
+    border-radius: 0 10px 0 0;
+    column-span: 1;
+    background-color: #fff;
+}
+
+.s5 {
+    grid-column: span 2 / span 2;
+    background-color: #fff;
+}
+
+.s6 {
+    grid-column: span 2 / span 2;
+    background-color: #fff;
+}
+
+.s7 {
+    grid-row: span 2 / span 2;
+    background-color: #fff;
+}
+
+.s8 {
+    grid-column: span 2 / span 2;
+    background-color: #fff;
+}
+
+.s9 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.s10 {
+    background: #000;
+    grid-column: span 2;
+}
+
+.s11 {
+    grid-row: span 2;
+    background-color: yellow;
+}
+
+.s12 {
+    background-color: yellow;
+    grid-row: span 2;
+    border-radius: 0 0 0 10px;
+}
+
+.s13 {
+    background-color: #fff;
+    grid-row: span 2;
+}
+
+.s14 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: red;
+}
+
+.s15 {
+    background-color: #fff;
+    border-radius: 0 0 10px 0;
+}
+
+.graphs {
+    display: grid;
+    margin: 100px auto;
+    width: 685px;
+    grid-template-areas:
+        "sidebar graphxl graphxl graphxl graphxl graphxl graphxl"
+        "sidebar graphsm1 graphsm1 graphsm2 graphsm2 graphsm3 graphsm3"
+        "sidebar graphmd1 graphmd1 graphmd1 graphmd2 graphmd2 graphmd2"
+    ;
+    grid-template-columns: 200px repeat(6, 70px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px 10px;
+    place-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.graphs>div:first-of-type {
+    background: var(--main);
+    /* border: 3px solid red; */
+    height: 3fr;
+    padding: 15px;
+    padding-right: none;
+}
+
+.graphs>div:not(:first-of-type) {
+    background: var(--bg-secondary);
+    height: 100%;
+}
+
+
+.graphs>div:not(.sidebar)>svg {
+    border-radius: 10px;
+    /* border: 3px solid black; */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+.sidebar>a {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.graphxl {
+    grid-area: graphxl;
+}
+
+.graphsm1 {
+    grid-area: graphsm1;
+}
+
+.graphsm2 {
+    grid-area: graphsm2;
+}
+
+.graphsm3 {
+    grid-area: graphsm3;
+}
+
+.graphmd1 {
+    grid-area: graphmd1;
+}
+
+.graphmd2 {
+    grid-area: graphmd2;
+}
