@@ -103,7 +103,8 @@ main {
 .graphs {
     display: grid;
     margin: 100px auto;
-    width: 685px;
+    width: 720px;
+    height: 720px;
     grid-template-areas:
         "sidebar graphxl graphxl graphxl graphxl graphxl graphxl"
         "sidebar graphsm1 graphsm1 graphsm2 graphsm2 graphsm3 graphsm3"
@@ -115,6 +116,7 @@ main {
     place-items: center;
     border: 3px solid black;
     border-radius: 10px;
+    overflow-x: hidden;
 }
 
 .graphs>div:first-of-type {
@@ -174,4 +176,25 @@ main {
 
 .graphmd2 {
     grid-area: graphmd2;
+}
+
+.ram {
+    max-width: 1440px;
+    margin: 100px auto;
+    /* max-width: 500px; */
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.ram>img {
+    display: block;
+    width: 50%;
+    min-width: 180px;
+    height: auto;
+    aspect-ratio: 1;
+    background-color: var(--main);
+    border: 2px solid black;
+    border-radius: 10px;
 }
