@@ -221,6 +221,8 @@ main {
 
 .ram>div>a:hover {
     opacity: 1;
-    transform: scale(3) rotate(20deg);
-    transition: all 200ms;
+    transform: rotate(20deg);
+    text-decoration: underline;
+    font-size: 3.6rem;
+    transition: all 300ms;
 }
