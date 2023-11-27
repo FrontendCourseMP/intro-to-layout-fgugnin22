@@ -459,9 +459,10 @@ h1 {
     display: block;
 }
 
-p.amount {
+.amount {
     font-size: 2rem;
     font-weight: 600;
+    display: block;
 }
 
 .section-how-to-use {
@@ -547,12 +548,12 @@ p.amount {
 }
 
 
-.section-happy-customers__list>li>p:first-of-type {
+.section-happy-customers__list>li>blockquote>cite:first-of-type {
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-main);
     margin-bottom: .0rem;
-
+    font-style: normal;
 }
 
 .section-happy-customers__list>li>blockquote {
