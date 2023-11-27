@@ -188,13 +188,28 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
-.ram>img {
-    display: block;
+.ram>div {
+    display: grid;
+    grid-template:
+        "a" 1fr
+    ;
     width: 50%;
     min-width: 180px;
     height: auto;
     aspect-ratio: 1;
-    background-color: var(--main);
+    background-color: var(--bg-secondary);
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.ram>div>img {
+    grid-area: a;
+}
+
+.ram>div>a {
+    grid-area: a;
+    place-self: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    background-color: transparent;
 }
