@@ -181,9 +181,11 @@ main {
 .ram {
     max-width: 1440px;
     margin: 100px auto;
+    height: 400px;
     /* max-width: 500px; */
     display: grid;
     place-items: center;
+    align-content: center;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
