@@ -228,6 +228,9 @@ h1 {
         width: 100% !important;
     }
 
+    .section-download-call-secondary__downloadlink:last-of-type>img {
+        margin-right: 0;
+    }
 }
 
 .container-primary>p {
