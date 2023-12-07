@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/grid.css" />
     <title>Trading App</title>
   </head>
+
   <body>
     <header>
       <div class="header--contacts">
@@ -198,220 +202,80 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="painting">
-          <div class="strip s1"></div>
-          <div class="strip s2"></div>
-          <div class="strip s3"></div>
-          <div class="strip s4"></div>
-          <div class="strip s5"></div>
-          <div class="strip s6"></div>
-          <div class="strip s7"></div>
-          <div class="strip s8"></div>
-          <div class="strip s9"></div>
-          <div class="strip s10"></div>
-          <div class="strip s11"></div>
-          <div class="strip s12"></div>
-          <div class="strip s13"></div>
-          <div class="strip s14"></div>
-          <div class="strip s15"></div>
-        </div>
-      </section>
-      <section class="graphs">
-        <div class="sidebar">
-          <a href="">Anchor tag number 1</a>
-          <a href="">Anchor tag number 2</a>
-          <a href="">Anchor tag number 3</a>
-          <a href="">Anchor tag number 4</a>
-          <a href="">Anchor tag number 5</a>
-          <a href="">Anchor tag number 6</a>
-          <a href="">Anchor tag number 7</a>
-          <a href="">Anchor tag number 8</a>
-          <a href="">Anchor tag number 9</a>
-        </div>
-        <div class="graphxl">
-          <svg
-            height="auto"
-            viewBox="0 0 400 200"
-            xmlns="http://www.w3.org/2000/svg"
+      <form
+        style="margin: 20rem 30rem 60rem 30rem; font-size: 2.5rem"
+        method="POST"
+        action="//httpbin.org/post"
+      >
+        <fieldset>
+          <legend>Регистрация нового пользователя</legend>
+          <fieldset>
+            <legend>Личные данные</legend>
+            <input type="radio" name="sex" id="1" value="1" /><label for="1"
+              >Мужской</label
+            >
+            <input type="radio" name="sex" id="0" value="0" /><label for="0"
+              >Женский</label
+            >
+            <div class="transparent">
+              <input required type="text" id="name" placeholder="Гертруд" />
+
+              <label for="name">Ваше имя*</label>
+            </div>
+            <div class="transparent">
+              <input type="date" name="birth" id="birth" />
+              <label for="birth">Дата рождения</label>
+            </div>
+            <div class="transparent">
+              <input required type="password" name="password" id="password" />
+
+              <label for="password">Введите пароль*</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Контактные данные</legend>
+            <div class="transparent">
+              <input
+                required
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@example.com"
+              /><label for="email">Введите адрес email*</label>
+            </div>
+            <div class="transparent">
+              <input
+                required
+                placeholder="+7 (999) 000-00-00"
+                maxlength="14"
+                minlength="10"
+                type="number"
+                name="phone"
+                id="phone"
+              />
+              <label for="phone">Введите номер телефона*</label>
+            </div>
+            <select name="datetime" id="">
+              <option value="1">Утро</option>
+              <option selected value="1">День</option>
+              <option value="1">Вечер</option>
+              <option value="1">Ночь</option>
+            </select>
+            <label for="daytime">Удобный интервал для связи</label>
+          </fieldset>
+          <button
+            style="
+              padding: 2rem;
+              width: 100%;
+              height: initial;
+              margin: 1rem auto;
+            "
+            type="submit"
           >
-            <path
-              d="M0 199.37c6.2-2.7 18.6-9.85 31-13.503 12.4-3.653 18.6-.197 31-4.762 12.4-4.565 18.6-10.15 31-18.062 12.4-7.912 18.6-20.102 31-21.5 12.4-1.397 18.6 13.006 31 14.511 12.4 1.506 18.6-1.837 31-6.984 12.4-5.148 18.6-11.98 31-18.752 12.4-6.772 18.6-5.345 31-15.11 12.4-9.764 18.6-33.92 31-33.713 12.4.208 18.6 42.447 31 34.75 12.4-7.696 18.6-56.932 31-73.231 12.4-16.3 18.6-1.216 31-8.267 12.4-7.05 24.8-21.59 31-26.988L400 200H0Z"
-              fill="#444cf71a"
-            />
-            <path
-              d="M0 199.37c6.2-2.7 18.6-9.85 31-13.503 12.4-3.653 18.6-.197 31-4.762 12.4-4.565 18.6-10.15 31-18.062 12.4-7.912 18.6-20.102 31-21.5 12.4-1.397 18.6 13.006 31 14.511 12.4 1.506 18.6-1.837 31-6.984 12.4-5.148 18.6-11.98 31-18.752 12.4-6.772 18.6-5.345 31-15.11 12.4-9.764 18.6-33.92 31-33.713 12.4.208 18.6 42.447 31 34.75 12.4-7.696 18.6-56.932 31-73.231 12.4-16.3 18.6-1.216 31-8.267 12.4-7.05 24.8-21.59 31-26.988"
-              fill="none"
-              stroke="#444cf7"
-              stroke-width="4"
-            />
-            <g fill="#444cf7">
-              <circle cy="199.37" r="8" />
-              <circle cx="31" cy="185.867" r="8" />
-              <circle cx="62" cy="181.105" r="8" />
-              <circle cx="93" cy="163.043" r="8" />
-              <circle cx="124" cy="141.544" r="8" />
-              <circle cx="155" cy="156.054" r="8" />
-              <circle cx="186" cy="149.07" r="8" />
-              <circle cx="217" cy="130.318" r="8" />
-              <circle cx="248" cy="115.208" r="8" />
-              <circle cx="279" cy="81.495" r="8" />
-              <circle cx="310" cy="116.245" r="8" />
-              <circle cx="341" cy="43.014" r="8" />
-              <circle cx="372" cy="34.747" r="8" />
-              <circle cx="403" cy="7.759" r="8" />
-            </g>
-          </svg>
-        </div>
-        <div class="graphsm1">
-          <svg
-            height="auto"
-            viewBox="0 0 150 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 189.77c7.6-7.89 22.8-24.003 38-39.455 15.2-15.451 22.8-29.502 38-37.803 15.2-8.3 22.8 10.815 38-3.698s30.4-55.093 38-68.866L150 200H0Z"
-              fill="#444cf71a"
-            />
-            <path
-              d="M0 189.77c7.6-7.89 22.8-24.003 38-39.455 15.2-15.451 22.8-29.502 38-37.803 15.2-8.3 22.8 10.815 38-3.698s30.4-55.093 38-68.866"
-              fill="none"
-              stroke="#444cf7"
-              stroke-width="3"
-            />
-            <g fill="#444cf7">
-              <circle cy="189.771" r="6" />
-              <circle cx="38" cy="150.315" r="6" />
-              <circle cx="76" cy="112.512" r="6" />
-              <circle cx="114" cy="108.814" r="6" />
-              <circle cx="152" cy="39.948" r="6" />
-            </g>
-          </svg>
-        </div>
-        <div class="graphsm2">
-          <svg
-            height="auto"
-            viewBox="0 0 150 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 199.835c7.6-7.053 22.8-15.655 38-35.262s22.8-43.685 38-62.774c15.2-19.088 22.8-28.414 38-32.666 15.2-4.252 30.4 9.125 38 11.406L150 200H0Z"
-              fill="#444cf71a"
-            />
-            <path
-              d="M0 199.835c7.6-7.053 22.8-15.655 38-35.262s22.8-43.685 38-62.774c15.2-19.088 22.8-28.414 38-32.666 15.2-4.252 30.4 9.125 38 11.406"
-              fill="none"
-              stroke="#444cf7"
-              stroke-width="3"
-            />
-            <g fill="#444cf7">
-              <circle cy="199.835" r="6" />
-              <circle cx="38" cy="164.573" r="6" />
-              <circle cx="76" cy="101.799" r="6" />
-              <circle cx="114" cy="69.133" r="6" />
-              <circle cx="152" cy="80.539" r="6" />
-            </g>
-          </svg>
-        </div>
-        <div class="graphsm3">
-          <svg
-            height="auto"
-            viewBox="0 0 150 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 199.835c7.6-7.053 22.8-15.655 38-35.262s22.8-43.685 38-62.774c15.2-19.088 22.8-28.414 38-32.666 15.2-4.252 30.4 9.125 38 11.406L150 200H0Z"
-              fill="#444cf71a"
-            />
-            <path
-              d="M0 199.835c7.6-7.053 22.8-15.655 38-35.262s22.8-43.685 38-62.774c15.2-19.088 22.8-28.414 38-32.666 15.2-4.252 30.4 9.125 38 11.406"
-              fill="none"
-              stroke="#444cf7"
-              stroke-width="3"
-            />
-            <g fill="#444cf7">
-              <circle cy="199.835" r="6" />
-              <circle cx="38" cy="164.573" r="6" />
-              <circle cx="76" cy="101.799" r="6" />
-              <circle cx="114" cy="69.133" r="6" />
-              <circle cx="152" cy="80.539" r="6" />
-            </g>
-          </svg>
-        </div>
-        <div class="graphmd1">
-          <svg
-            height="auto"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 192.212c8-4.93 24-15.49 40-24.648 16-9.157 24-8.609 40-21.141 16-12.533 24-30.937 40-41.522 16-10.584 24 4.664 40-11.403s32-55.146 40-68.933V200H0Z"
-              fill="#444cf71a"
-            />
-            <path
-              d="M0 192.212c8-4.93 24-15.49 40-24.648 16-9.157 24-8.609 40-21.141 16-12.533 24-30.937 40-41.522 16-10.584 24 4.664 40-11.403s32-55.146 40-68.933"
-              fill="none"
-              stroke="#444cf7"
-              stroke-width="2"
-            />
-            <g fill="#444cf7">
-              <circle cy="192.212" r="6" />
-              <circle cx="40" cy="167.564" r="6" />
-              <circle cx="80" cy="146.423" r="6" />
-              <circle cx="120" cy="104.901" r="6" />
-              <circle cx="160" cy="93.498" r="6" />
-              <circle cx="200" cy="24.565" r="6" />
-            </g>
-          </svg>
-        </div>
-        <div class="graphmd2">
-          <svg
-            height="auto"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m0 196.913 25-19.471 25-20.838 25-27.423 25-9.474 25-15.888 25 13.532 25-88.02 25 47.1V200H0Z"
-              fill="#444cf7"
-            />
-            <path
-              d="m0 196.913 25-19.471 25-20.838 25-27.423 25-9.474 25-15.888 25 13.532 25-88.02 25 47.1"
-              fill="none"
-            />
-            <g fill="#444cf7">
-              <circle cy="196.913" r="6" />
-              <circle cx="25" cy="177.442" r="6" />
-              <circle cx="50" cy="156.604" r="6" />
-              <circle cx="75" cy="129.181" r="6" />
-              <circle cx="100" cy="119.707" r="6" />
-              <circle cx="125" cy="103.819" r="6" />
-              <circle cx="150" cy="117.351" r="6" />
-              <circle cx="175" cy="29.332" r="6" />
-              <circle cx="200" cy="76.431" r="6" />
-            </g>
-          </svg>
-        </div>
-      </section>
-      <section class="ram">
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 1</a>
-        </div>
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 2</a>
-        </div>
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 3</a>
-        </div>
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 4</a>
-        </div>
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 5</a>
-        </div>
-        <div>
-          <img src="./img/ЛР_1_Задание3.png" alt="" /><a href="">Ссылка 6</a>
-        </div>
-      </section>
+            Сохранить
+          </button>
+        </fieldset>
+      </form>
     </main>
     <footer>
       <div class="content-wrapper">
