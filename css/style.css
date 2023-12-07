@@ -231,6 +231,10 @@ h1 {
     .section-download-call-secondary__downloadlink:last-of-type>img {
         margin-right: 0;
     }
+
+    .section-about-primary__text {
+        margin: 0 auto !important;
+    }
 }
 
 .container-primary>p {
