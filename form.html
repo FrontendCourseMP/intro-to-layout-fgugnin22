@@ -10,6 +10,22 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Trading App</title>
+    <style>
+      main {
+        background: var(--background-secondary);
+      }
+      main fieldset,
+      main form button {
+        border-radius: 10px;
+      }
+      main form * {
+        margin: 3px 6px;
+      }
+      input:not([type="radio"]),
+      select {
+        padding: 5px;
+      }
+    </style>
   </head>
 
   <body>
@@ -203,7 +219,7 @@
     </header>
     <main>
       <form
-        style="margin: 20rem 30rem 60rem 30rem; font-size: 2.5rem"
+        style="margin: 20rem 30rem 40% 30rem; font-size: 2.5rem"
         method="POST"
         action="//httpbin.org/post"
       >
@@ -211,6 +227,7 @@
           <legend>Регистрация нового пользователя</legend>
           <fieldset>
             <legend>Личные данные</legend>
+            <span>Ваш пол:</span>
             <input type="radio" name="sex" id="1" value="1" /><label for="1"
               >Мужской</label
             >
@@ -219,7 +236,6 @@
             >
             <div class="transparent">
               <input required type="text" id="name" placeholder="Гертруд" />
-
               <label for="name">Ваше имя*</label>
             </div>
             <div class="transparent">
@@ -227,9 +243,16 @@
               <label for="birth">Дата рождения</label>
             </div>
             <div class="transparent">
-              <input required type="password" name="password" id="password" />
+              <input
+                maxlength="50"
+                minlength="8"
+                required
+                type="password"
+                name="password"
+                id="password"
+              />
 
-              <label for="password">Введите пароль*</label>
+              <label for="password">Введите пароль*(От 8 до 50 символов)</label>
             </div>
           </fieldset>
           <fieldset>
@@ -255,25 +278,51 @@
               />
               <label for="phone">Введите номер телефона*</label>
             </div>
-            <select name="datetime" id="">
-              <option value="1">Утро</option>
-              <option selected value="1">День</option>
-              <option value="1">Вечер</option>
-              <option value="1">Ночь</option>
-            </select>
-            <label for="daytime">Удобный интервал для связи</label>
+            <div class="transparent">
+              <select name="datetime" id="">
+                <option value="1">Утро</option>
+                <option selected value="1">День</option>
+                <option value="1">Вечер</option>
+                <option value="1">Ночь</option>
+              </select>
+              <label for="daytime">Удобный интервал для связи</label>
+            </div>
           </fieldset>
-          <button
+          <div
+            class="transparent"
             style="
-              padding: 2rem;
-              width: 100%;
-              height: initial;
-              margin: 1rem auto;
+              display: flex;
+              justify-content: space-between;
+              margin-top: 1rem;
             "
-            type="submit"
           >
-            Сохранить
-          </button>
+            <button
+              style="
+                padding: 2rem;
+                width: 45%;
+                height: initial;
+                margin: 0;
+                background: red;
+                color: #fff;
+              "
+              type="reset"
+            >
+              Сбросить
+            </button>
+            <button
+              style="
+                padding: 2rem;
+                width: 45%;
+                height: initial;
+                margin: 0;
+                background: var(--main);
+                color: #fff;
+              "
+              type="submit"
+            >
+              Сохранить
+            </button>
+          </div>
         </fieldset>
       </form>
     </main>
