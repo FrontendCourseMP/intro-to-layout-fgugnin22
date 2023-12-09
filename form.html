@@ -11,19 +11,75 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Trading App</title>
     <style>
+      label {
+        box-sizing: border-box;
+        height: 4rem;
+      }
       main {
         background: var(--background-secondary);
       }
+
       main fieldset,
       main form button {
         border-radius: 10px;
       }
+
       main form * {
         margin: 3px 6px;
       }
+
       input:not([type="radio"]),
       select {
         padding: 5px;
+      }
+
+      .footer__heading:hover {
+        width: 9.5rem;
+        transform: rotate(30deg) scale(1.5) skew(-20deg);
+        transition: transform 300ms;
+      }
+
+      input:focus + label {
+        border: 6px solid salmon;
+        border-radius: 4px;
+        transition: border 300ms;
+      }
+
+      input[type="radio"]:focus + label {
+        font-weight: 600;
+      }
+
+      input[required] + label {
+        color: palevioletred;
+      }
+
+      dt::first-letter {
+        font-size: 4rem;
+        color: var(--main);
+        font-weight: 700;
+      }
+
+      dd::after {
+        content: "🛈";
+      }
+      main form:last-of-type ul {
+        display: flex;
+        flex-basis: fill;
+        flex-wrap: wrap;
+      }
+      main form:last-of-type label {
+        display: block;
+        width: 40%;
+      }
+      main form:last-of-type input {
+        display: block;
+        width: 40%;
+      }
+      main form:last-of-type label:nth-of-type(even) {
+        color: blue;
+      }
+      main form:last-of-type label:nth-of-type(odd) {
+        color: blueviolet;
       }
     </style>
   </head>
@@ -217,9 +273,13 @@
         </div>
       </div>
     </header>
-    <main>
+    <main style="min-height: 100vh">
       <form
-        style="margin: 20rem 30rem 40% 30rem; font-size: 2.5rem"
+        style="
+          margin: 20rem 30rem 10rem 30rem;
+          font-size: 2.5rem;
+          height: initial;
+        "
         method="POST"
         action="//httpbin.org/post"
       >
@@ -324,6 +384,115 @@
             </button>
           </div>
         </fieldset>
+      </form>
+      <form
+        style="
+          height: initial;
+          margin: 10rem 30rem;
+          text-align: center;
+          font-size: 2.4rem;
+        "
+        action="./idk"
+      >
+        <dl>
+          <dt>Pseudoelement</dt>
+          <dd>
+            Is a keyword added to a selector that lets you style a specific part
+            of the selected element(s).
+          </dd>
+
+          <dt>Pseudoclass</dt>
+          <dd>
+            Is a selector that selects elements that are in a specific state,
+            e.g. they are the first element of their type, or they are being
+            hovered over by the mouse pointer.
+          </dd>
+        </dl>
+        <ul>
+          <input checked id="1231" type="checkbox" /><label for="1231"
+            >:active</label
+          >
+          <input id="1232" type="checkbox" /><label for="1232">:any </label
+          ><input id="1233" type="checkbox" /><label for="1233">:any-link</label
+          ><input checked id="1234" type="checkbox" /><label for="1234"
+            >:checked</label
+          ><input id="1235" type="checkbox" /><label for="1235">:default </label
+          ><input id="1236" type="checkbox" /><label for="1236">:defined</label
+          ><input id="1237" type="checkbox" /><label for="1237">:dir()</label
+          ><input checked id="1238" type="checkbox" /><label for="1238"
+            >:disabled </label
+          ><input id="1239" type="checkbox" /><label for="1239">:empty </label
+          ><input id="12310" type="checkbox" /><label for="12310"
+            >:enabled </label
+          ><input id="12311" type="checkbox" /><label for="12311">:first </label
+          ><input id="12312" type="checkbox" /><label for="12312"
+            >:first-child </label
+          ><input checked id="12313" type="checkbox" /><label for="12313"
+            >:first-of-type</label
+          ><input id="12314" type="checkbox" /><label for="12314"
+            >:fullscreen</label
+          ><input checked id="12315" type="checkbox" /><label for="12315"
+            >:focus</label
+          ><input checked id="12316" type="checkbox" /><label for="12316"
+            >:hover </label
+          ><input id="12317" type="checkbox" /><label for="12317"
+            >:indeterminate</label
+          ><input id="12318" type="checkbox" /><label for="12318"
+            >:in-range</label
+          ><input id="12319" type="checkbox" /><label for="12319"
+            >:invalid</label
+          ><input id="12320" type="checkbox" /><label for="12320">:lang()</label
+          ><input id="12321" type="checkbox" /><label for="12321"
+            >:last-child </label
+          ><input checked id="12322" type="checkbox" /><label for="12322"
+            >:last-of-type </label
+          ><input id="12323" type="checkbox" /><label for="12323">:left </label
+          ><input id="12324" type="checkbox" /><label for="12324">:link </label
+          ><input checked id="12325" type="checkbox" /><label for="12325"
+            >:not()</label
+          ><input id="12326" type="checkbox" /><label for="12326"
+            >:nth-child()</label
+          ><input id="a1" type="checkbox" /><label for="a1"
+            >:nth-last-child()</label
+          ><input id="a2" type="checkbox" /><label for="a2"
+            >:nth-last-of-type() </label
+          ><input checked id="a3" type="checkbox" /><label for="a3"
+            >:nth-of-type()</label
+          ><input id="a4" type="checkbox" /><label for="a4">:only-child</label
+          ><input id="a5" type="checkbox" /><label for="a5">:only-of-type</label
+          ><input id="a6" type="checkbox" /><label for="a6">:optional</label
+          ><input id="a7" type="checkbox" /><label for="a7">:out-of-range</label
+          ><input id="a8" type="checkbox" /><label for="a8">:read-only</label
+          ><input id="a9" type="checkbox" /><label for="a9">:read-write</label
+          ><input checked id="a10" type="checkbox" /><label for="a10"
+            >:required</label
+          ><input id="a11" type="checkbox" /><label for="a11">:right</label
+          ><input checked id="a12" type="checkbox" /><label for="a12"
+            >:root </label
+          ><input id="a13" type="checkbox" /><label for="a13">:scope</label
+          ><input id="a14" type="checkbox" /><label for="a14">:target</label
+          ><input id="a15" type="checkbox" /><label for="a15">:valid</label
+          ><input checked id="a16" type="checkbox" /><label for="a16"
+            >:visited</label
+          >
+        </ul>
+        <ul>
+          <input checked id="b1" type="checkbox" /><label for="b1"
+            >::after</label
+          ><input checked id="b2" type="checkbox" /><label for="b2"
+            >::before</label
+          ><input checked id="b3" type="checkbox" /><label for="b3"
+            >::first-letter</label
+          ><input id="b4" type="checkbox" /><label for="b4">::first-line</label
+          ><input id="b5" type="checkbox" /><label for="b5"
+            >::grammar-error</label
+          ><input id="b6" type="checkbox" /><label for="b6">::marker</label
+          ><input checked id="b7" type="checkbox" /><label for="b7"
+            >::selection</label
+          ><input id="b8" type="checkbox" /><label for="b8"
+            >::spelling-error</label
+          >
+        </ul>
       </form>
     </main>
     <footer>

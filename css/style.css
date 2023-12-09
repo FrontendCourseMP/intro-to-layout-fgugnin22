@@ -49,6 +49,32 @@
     --text-main: #232223;
     --text-secondary: #6C6C72;
     font-family: 'Inter', sans-serif, Helvetica, Arial;
+    --shadow-color: 0deg 34% 40%;
+    --shadow-elevation-low:
+        0.9px 0.9px 1.7px hsl(var(--shadow-color) / 0.21),
+        1.9px 1.8px 3.5px -0.5px hsl(var(--shadow-color) / 0.42),
+        4.4px 4.3px 8.3px -1px hsl(var(--shadow-color) / 0.63);
+    --shadow-elevation-medium:
+        0.9px 0.9px 1.7px hsl(var(--shadow-color) / 0.18),
+        3.6px 3.5px 6.8px -0.2px hsl(var(--shadow-color) / 0.28),
+        6.7px 6.6px 12.7px -0.5px hsl(var(--shadow-color) / 0.39),
+        12.2px 12px 23.1px -0.7px hsl(var(--shadow-color) / 0.49),
+        22px 21.7px 41.7px -1px hsl(var(--shadow-color) / 0.6);
+    --shadow-elevation-high:
+        0.9px 0.9px 1.7px hsl(var(--shadow-color) / 0.16),
+        8.8px 8.7px 16.7px -0.1px hsl(var(--shadow-color) / 0.21),
+        15.9px 15.7px 30.2px -0.2px hsl(var(--shadow-color) / 0.26),
+        23.3px 22.9px 44.1px -0.3px hsl(var(--shadow-color) / 0.31),
+        31.9px 31.4px 60.4px -0.4px hsl(var(--shadow-color) / 0.36),
+        42.9px 42.3px 81.3px -0.6px hsl(var(--shadow-color) / 0.41),
+        57.3px 56.5px 108.6px -0.7px hsl(var(--shadow-color) / 0.46),
+        76.3px 75.2px 144.6px -0.8px hsl(var(--shadow-color) / 0.5),
+        100.9px 99.5px 191.3px -0.9px hsl(var(--shadow-color) / 0.55),
+        132.2px 130.4px 250.7px -1px hsl(var(--shadow-color) / 0.6);
+}
+
+::selection {
+    background: var(--text-main);
 }
 
 * {
@@ -109,6 +135,37 @@ div {
 
 h1 {
     margin: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited:not(.header__download) {
+    color: var(--main);
+}
+
+a:focus {
+    border: 3px solid var(--main);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+button:hover {
+    transition: opacity 150ms;
+    box-shadow: var(--shadow-elevation-high);
+
+    animation: 1s linear spin infinite;
+
 }
 
 .logo {
@@ -798,8 +855,20 @@ footer {
     width: 100%;
     padding: 1.3rem 0 1.3rem 1.7rem;
     border-radius: .4rem;
+    color: var(--text-main);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
 }
 
+.footer__form>label>input::placeholder {
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
 
 .footer__form>button {
     position: absolute;
