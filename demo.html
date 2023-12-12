@@ -16,10 +16,11 @@
           transform: translateX(0);
         }
         50% {
-          transform: translateX(-450px);
+          transform: translateX(-500px);
         }
-        50.1% {
-          transform: translateX(450px);
+        50.01% {
+          transition-duration: 0;
+          transform: translateX(500px);
         }
         100% {
           transform: translateX(0);
@@ -30,7 +31,7 @@
         overflow: hidden;
       }
       .marquee {
-        animation: marquee 1s linear infinite;
+        animation: marquee 1.5s linear infinite;
         overflow: hidden;
         width: 450px;
       }
