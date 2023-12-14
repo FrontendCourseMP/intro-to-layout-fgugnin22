@@ -13,27 +13,28 @@
       }
       @keyframes marquee {
         0% {
-          transform: translateX(0);
+          transform: translateX(600px);
         }
-        50% {
-          transform: translateX(-500px);
-        }
-        50.01% {
-          transition-duration: 0;
-          transform: translateX(500px);
-        }
+        /* 99.9% {
+          transform: translateX(-550px);
+        } */
         100% {
-          transform: translateX(0);
+          transform: translateX(-570px);
         }
       }
+
       .mrq-wrapper {
         width: 450px;
         overflow: hidden;
       }
       .marquee {
+        width: 750px;
+        max-height: 150px;
+      }
+      .marquee-img {
         animation: marquee 1.5s linear infinite;
         overflow: hidden;
-        width: 450px;
+        width: 150px;
       }
       .flip-card {
         background-color: transparent;
@@ -77,20 +78,38 @@
         color: white;
         transform: rotateY(180deg);
       }
+      .d1 {
+        animation-delay: 150ms;
+      }
+      .d2 {
+        animation-delay: 300ms;
+      }
+      .d3 {
+        animation-delay: 450ms;
+      }
     </style>
   </head>
   <body>
     <div class="mrq-wrapper">
       <div class="marquee">
         <img
+          class="marquee-img"
           style="width: 150px; height: 150px"
           src="./img/app.png"
           alt=""
         /><img
+          class="marquee-img d1"
           style="width: 150px; height: 150px"
           src="./img/googleplay1.png"
           alt=""
         /><img
+          class="marquee-img d2"
+          style="width: 150px; height: 150px"
+          src="./img/background3.png"
+          alt=""
+        />
+        <img
+          class="marquee-img d3"
           style="width: 150px; height: 150px"
           src="./img/background3.png"
           alt=""
